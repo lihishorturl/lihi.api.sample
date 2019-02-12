@@ -1,3 +1,5 @@
 .vscode
 csharp/obj
 csharp/bin
+node_modules
+package-lock.json
