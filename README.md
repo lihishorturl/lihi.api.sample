@@ -1,19 +1,18 @@
 # lihi
 sample code
-這是一個商家提出的需求
-如果有其他語言的需求歡迎告訴我們
 
 終端機指令版本
-1. 把 {your-api-key} 取代成你的lihi 後台 api 金鑰
-2. 把 {your-long-url} 取代成你的長網址
-3. 把下方代碼貼到終端機
+1. 到 lihi 短網址後台找 api key 金鑰 
+2. 把下方的 7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX 取代成你的 api key 
+3. 把下方的 https://google.com 取代成你的長網址
+4. 把下方代碼貼到終端機 press Enter
 ```
 curl -X POST \
   https://app.lihi.io/api/v1/url \
-  -H 'Authorization: x-api-key:{your-api-key}' \
+  -H 'Authorization: x-api-key:7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -H 'cache-control: no-cache' \
-  -d 'longUrl={your-long-url}'
+  -d 'longUrl=https://google.com'
 ```
 
-Updated at 2019-02-12
+Updated at 2019-03-31

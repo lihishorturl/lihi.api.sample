@@ -1,10 +1,15 @@
 <?php
-// 取代 {your-api-key} ，改成來自您後台的 API key, 格式像是 7bKRlBs4qN25hM0rvgxtiXeU5kUTOrClLQTAFjf0
-// 取代 https://google.com.tw ，改成您的長網址
+/**
+1. 到 lihi 短網址後台找 api key 金鑰 
+2. 把下方的 7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX 取代成你的 api key 
+3. 把下方的 https://google.com 取代成你的長網址
+*/
 
-// replace {your-api-key} to your api key, that format like 7bKRlBs4qN25hM0rvgxtiXeU5kUTOrClLQTAFjf0
-// replace "https://google.com.tw" to your long url
-
+/**
+1. Find your lihi api key in admin backend
+2. Replace 7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX to your api key
+3. Replace https://google.com to your long url
+*/
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -15,9 +20,9 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "longUrl=".urlencode("https://google.com.tw"),
+  CURLOPT_POSTFIELDS => "longUrl=".urlencode("https://google.com"),
   CURLOPT_HTTPHEADER => array(
-    "Authorization: x-api-key:{your-api-key}",
+    "Authorization: x-api-key:7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX",
     "Content-Type: application/x-www-form-urlencoded",
     "cache-control: no-cache"
   ),
