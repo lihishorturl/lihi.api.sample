@@ -36,7 +36,7 @@ function post($postFields) {
 	$curl = curl_init();
 
 	curl_setopt_array($curl, array(
-	  CURLOPT_URL => "https://lihi.superlihi.com/api/v1/batchUrls",
+	  CURLOPT_URL => "https://app.lihi.io/api/v1/batchUrls",
 	  CURLOPT_RETURNTRANSFER => false,
 	  CURLOPT_ENCODING => "",
 	  CURLOPT_TIMEOUT => 60,
@@ -61,4 +61,3 @@ function post($postFields) {
 	  echo $response;
 	}
 }
-
