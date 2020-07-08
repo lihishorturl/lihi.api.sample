@@ -12,6 +12,13 @@
 */
 $curl = curl_init();
 
+$params = [
+  "longUrl"=>urlencode("https://google.com"),
+  //"domain" => "yourdomain",
+  //"slug" => "yourslug",
+  //"tags" => "yourtags",
+];
+
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://app.lihi.io/api/v1/url",
   CURLOPT_RETURNTRANSFER => true,
@@ -20,7 +27,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "longUrl=".urlencode("https://google.com"),
+  CURLOPT_POSTFIELDS => http_build_query( $params ),
   CURLOPT_HTTPHEADER => array(
     "Authorization: x-api-key:7bKRlQTAFjf0Bs4qN25hM0rvTOrCgxtiXeUXXXXX",
     "Content-Type: application/x-www-form-urlencoded",
